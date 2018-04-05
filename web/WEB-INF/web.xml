@@ -6,7 +6,7 @@
     </servlet>
     <servlet>
         <servlet-name>loginControler</servlet-name>
-        <servlet-class>com.fc.curso.web.controller.LoginControler</servlet-class>
+        <servlet-class>com.fc.curso.web.controller.LoginController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>holaMundo</servlet-name>
@@ -21,4 +21,9 @@
             30
         </session-timeout>
     </session-config>
+    
+    <!-- Pagina de login aparece por default-->
+    <welcome-file-list>
+        <welcome-file>/login.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>

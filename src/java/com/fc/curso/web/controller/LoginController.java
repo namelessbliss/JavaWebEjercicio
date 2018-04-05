@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class LoginControler extends HttpServlet {
+public class LoginController extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -26,6 +26,13 @@ public class LoginControler extends HttpServlet {
             LoginServiceImpl loginService = new  LoginServiceImpl();
             
             boolean isValido = loginService.autenticarUsuario(usuario, pass);
+            String mapping = "/login.jsp";
+            
+            if (isValido){
+                mapping = "/portal.jsp";
+            }
+            //redirige hacia la direccion del valor de mapping
+            this.getServletContext().getRequestDispatcher(mapping).forward(request, response);
             
             System.out.println("Usuario " + isValido);
       

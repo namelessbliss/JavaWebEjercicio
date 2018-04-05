@@ -1,6 +1,6 @@
 <%-- 
-    Document   : holaMundo
-    Created on : 02/04/2018, 05:06:47 PM
+    Document   : portal
+    Created on : 05/04/2018, 05:30:19 PM
     Author     : Administrador
 --%>
 
@@ -9,9 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Portal del  sistema</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Bienvenido al sistema!</h1>
     </body>
 </html>
