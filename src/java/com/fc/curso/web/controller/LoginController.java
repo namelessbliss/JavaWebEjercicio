@@ -26,8 +26,9 @@ public class LoginController extends HttpServlet {
             LoginServiceImpl loginService = new  LoginServiceImpl();
             
             boolean isValido = loginService.autenticarUsuario(usuario, pass);
-            String mapping = "/login.jsp";
-            
+            String mapping = "/login2.jsp";
+            //Mensaje de login incorrecto
+            request.setAttribute("mensaje", "Nombre de usuario y contraseña incorrecto, intente de nuevo");
             if (isValido){
                 mapping = "/portal.jsp";
             }
